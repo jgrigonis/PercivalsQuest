@@ -326,7 +326,7 @@ def pq_grace(user, target):
     stats = ["Reflexes", "Fortitude", "Mind"]
     trigger_chance = user.level[1] * 0.02
     if random.random() < trigger_chance:
-         targstring = "You glow" if hasattr(user, "gear") else \
+        targstring = "You glow" if hasattr(user, "gear") else \
             "The enemy glows"
         print targstring + " with divine impetus!"
         buff = random.randint(1, user.stats[5]) if user.stats[5] > 1 else 1
@@ -340,7 +340,7 @@ def pq_spellcraft(user, target):
     if random.random() < trigger_chance and user.skillpoints[0] \
         < user.skillpoints[1]:
         user.huh(-1)
-         targstring = "You recover" if hasattr(user, "gear") else \
+        targstring = "You recover" if hasattr(user, "gear") else \
             "The enemy recovers"
         print targstring + " a skill point!"
     return
